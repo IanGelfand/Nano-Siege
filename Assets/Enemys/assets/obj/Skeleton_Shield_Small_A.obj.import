@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dknijq1rc8l4u"
+path="res://.godot/imported/Skeleton_Shield_Small_A.obj-fa6843611df8e792885d701f08e0babf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Skeleton_Shield_Small_A.obj-fa6843611df8e792885d701f08e0babf.mesh"]
+
+source_file="res://Assets/Enemys/assets/obj/Skeleton_Shield_Small_A.obj"
+dest_files=["res://.godot/imported/Skeleton_Shield_Small_A.obj-fa6843611df8e792885d701f08e0babf.mesh", "res://.godot/imported/Skeleton_Shield_Small_A.obj-fa6843611df8e792885d701f08e0babf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,216 @@
+[gd_scene load_steps=17 format=3 uid="uid://cqaw1w8mfi7yo"]
+
+[ext_resource type="PackedScene" uid="uid://oo1cjpdq1kyo" path="res://Assets/Enviorment/Assets/gltf/table_long.gltf" id="1_12m1t"]
+[ext_resource type="Script" uid="uid://bm536h88pagd4" path="res://Scripts/title_screen.gd" id="1_bsy20"]
+[ext_resource type="Texture2D" uid="uid://2ysudjh16i5s" path="res://Assets/buttonLong_brown.png" id="1_o1e67"]
+[ext_resource type="Script" uid="uid://ceurplu2lm43k" path="res://Scripts/title.gd" id="2_x2pfe"]
+[ext_resource type="Texture2D" uid="uid://cjrwm07ssfikd" path="res://Assets/buttonLong_brown_pressed.png" id="2_ycay6"]
+[ext_resource type="PackedScene" uid="uid://byfkmpn4aupyl" path="res://Assets/Enviorment/Assets/gltf/wall.gltf" id="3_n82rj"]
+[ext_resource type="FontFile" uid="uid://drbd6gy16lw6i" path="res://Assets/DungeonFont.ttf" id="3_ycay6"]
+[ext_resource type="PackedScene" uid="uid://clfijujufgqh3" path="res://Assets/Enviorment/Assets/gltf/wall_corner.gltf" id="4_0061g"]
+[ext_resource type="PackedScene" uid="uid://batlmjxr00op8" path="res://Assets/Enviorment/Assets/gltf/floor_tile_large.gltf" id="6_sqelc"]
+[ext_resource type="PackedScene" uid="uid://biy1a8fcemvfh" path="res://Assets/Enviorment/Assets/gltf/chair.gltf" id="7_6vd4x"]
+[ext_resource type="PackedScene" uid="uid://jim056awomob" path="res://Scenes/skeleton_minion.tscn" id="8_n82rj"]
+[ext_resource type="PackedScene" uid="uid://3nelqtarsda5" path="res://Assets/Enviorment/Assets/gltf/box_stacked.gltf" id="9_8mikk"]
+[ext_resource type="PackedScene" uid="uid://dipxnbghqfgdj" path="res://Scenes/torch_mounted.tscn" id="9_0061g"]
+[ext_resource type="PackedScene" uid="uid://co1ao67v7iif7" path="res://Assets/Enviorment/Assets/gltf/crates_stacked.gltf" id="10_sqelc"]
+[ext_resource type="PackedScene" uid="uid://djbj3eb130886" path="res://Scenes/chest_gold.tscn" id="11_sqelc"]
+[ext_resource type="AudioStream" uid="uid://b32uctc07vs1c" path="res://Audio/Confirm.wav" id="16_07cxn"]
+
+[node name="TitleScreen" type="Node3D"]
+script = ExtResource("1_bsy20")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -275.0
+offset_top = 25.0
+offset_right = 275.0
+offset_bottom = 154.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.864675, 0.864675, 0.864675, 1)
+theme_override_fonts/font = ExtResource("3_ycay6")
+theme_override_font_sizes/font_size = 128
+text = "Nano Siege"
+script = ExtResource("2_x2pfe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = 110.0
+offset_right = 95.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(190, 49)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture_normal = ExtResource("1_o1e67")
+texture_pressed = ExtResource("2_ycay6")
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ycay6")
+theme_override_font_sizes/font_size = 32
+text = "PLAY"
+
+[node name="QuitButton" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_o1e67")
+texture_pressed = ExtResource("2_ycay6")
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/QuitButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_ycay6")
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+
+[node name="table_long2" parent="." instance=ExtResource("1_12m1t")]
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="wall2" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, 2)
+
+[node name="wall6" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(1, 0, 5.68434e-15, 0, 1, 0, -5.68434e-15, 0, 1, 2, 0, 6)
+
+[node name="wall7" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(1, 0, 5.68434e-15, 0, 1, 0, -5.68434e-15, 0, 1, -2, 0, 6)
+
+[node name="wall4" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 0, 2)
+
+[node name="wall_corner4" parent="Walls" instance=ExtResource("4_0061g")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -6, 0, 6)
+
+[node name="wall_corner5" parent="Walls" instance=ExtResource("4_0061g")]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 6, 0, 6)
+
+[node name="wall8" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 4, 2)
+
+[node name="wall9" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(1, 0, 5.68434e-15, 0, 1, 0, -5.68434e-15, 0, 1, 2, 4, 6)
+
+[node name="wall10" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(1, 0, 5.68434e-15, 0, 1, 0, -5.68434e-15, 0, 1, -2, 4, 6)
+
+[node name="wall11" parent="Walls" instance=ExtResource("3_n82rj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 4, 2)
+
+[node name="wall_corner6" parent="Walls" instance=ExtResource("4_0061g")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -6, 4, 6)
+
+[node name="wall_corner7" parent="Walls" instance=ExtResource("4_0061g")]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 6, 4, 6)
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="floor_tile_large10" parent="Floor" instance=ExtResource("6_sqelc")]
+
+[node name="floor_tile_large11" parent="Floor" instance=ExtResource("6_sqelc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="floor_tile_large12" parent="Floor" instance=ExtResource("6_sqelc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="floor_tile_large16" parent="Floor" instance=ExtResource("6_sqelc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="floor_tile_large17" parent="Floor" instance=ExtResource("6_sqelc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="floor_tile_large18" parent="Floor" instance=ExtResource("6_sqelc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -2.99003e-08, 8.21505e-08, 0, 0.939693, 0.34202, -8.74228e-08, 0.34202, -0.939693, 0, 2, -2)
+
+[node name="Skeleton" type="Node3D" parent="."]
+
+[node name="chair2" parent="Skeleton" instance=ExtResource("7_6vd4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1)
+
+[node name="Skeleton_Minion" parent="Skeleton" instance=ExtResource("8_n82rj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 1)
+
+[node name="Skeleton2" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 2)
+
+[node name="chair2" parent="Skeleton2" instance=ExtResource("7_6vd4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1)
+
+[node name="Skeleton_Minion" parent="Skeleton2" instance=ExtResource("8_n82rj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 1)
+
+[node name="Skeleton3" type="Node3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1, 0, 1)
+
+[node name="chair2" parent="Skeleton3" instance=ExtResource("7_6vd4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1)
+
+[node name="Skeleton_Minion" parent="Skeleton3" instance=ExtResource("8_n82rj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 1)
+
+[node name="torch_mounted" parent="." instance=ExtResource("9_0061g")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.01212, 2.17293, 5.7319)
+
+[node name="torch_mounted2" parent="." instance=ExtResource("9_0061g")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.98788, 2.17293, 5.7319)
+
+[node name="torch_mounted3" parent="." instance=ExtResource("9_0061g")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -5.7, 2.173, 2.732)
+
+[node name="torch_mounted4" parent="." instance=ExtResource("9_0061g")]
+transform = Transform3D(1.78814e-07, 0, -1, 0, 1, 0, 1, 0, 1.78814e-07, 5.7, 2.173, 2.732)
+
+[node name="box_stacked2" parent="." instance=ExtResource("9_8mikk")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 4, 0, 4)
+
+[node name="crates_stacked2" parent="." instance=ExtResource("10_sqelc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 4)
+
+[node name="chest_gold2" parent="." instance=ExtResource("11_sqelc")]
+transform = Transform3D(-0.562589, 0, 0.826737, 0, 1, 0, -0.826737, 0, -0.562589, -4.44126, 0, 1.81937)
+
+[node name="Audio" type="Node3D" parent="."]
+
+[node name="Confirm" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("16_07cxn")
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

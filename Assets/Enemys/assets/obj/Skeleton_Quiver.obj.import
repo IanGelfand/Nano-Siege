@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlmdapwtikx5u"
+path="res://.godot/imported/Skeleton_Quiver.obj-6d2f0eadab3d214c38ba52643ef4ae1d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Skeleton_Quiver.obj-6d2f0eadab3d214c38ba52643ef4ae1d.mesh"]
+
+source_file="res://Assets/Enemys/assets/obj/Skeleton_Quiver.obj"
+dest_files=["res://.godot/imported/Skeleton_Quiver.obj-6d2f0eadab3d214c38ba52643ef4ae1d.mesh", "res://.godot/imported/Skeleton_Quiver.obj-6d2f0eadab3d214c38ba52643ef4ae1d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

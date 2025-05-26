@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2t2h4364giqv"
+path="res://.godot/imported/Skeleton_Crossbow.obj-a772fec26fb1c1777677804b6ec8cbaa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Skeleton_Crossbow.obj-a772fec26fb1c1777677804b6ec8cbaa.mesh"]
+
+source_file="res://Assets/Enemys/assets/obj/Skeleton_Crossbow.obj"
+dest_files=["res://.godot/imported/Skeleton_Crossbow.obj-a772fec26fb1c1777677804b6ec8cbaa.mesh", "res://.godot/imported/Skeleton_Crossbow.obj-a772fec26fb1c1777677804b6ec8cbaa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

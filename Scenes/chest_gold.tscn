@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://djbj3eb130886"]
+
+[ext_resource type="PackedScene" uid="uid://bjio16njgohsn" path="res://Assets/Enviorment/Assets/gltf/chest_gold.gltf" id="1_0idx1"]
+
+[node name="chest_gold2" instance=ExtResource("1_0idx1")]
+
+[node name="chest_gold_lid" parent="chest_gold" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.5, -0.564883)

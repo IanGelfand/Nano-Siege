@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://iiuijhfvvp53"]
+
+[ext_resource type="Script" uid="uid://cmgq30pdvyowh" path="res://Scripts/sound_manager.gd" id="1_25ke0"]
+[ext_resource type="AudioStream" uid="uid://b32uctc07vs1c" path="res://Audio/Confirm.wav" id="2_1ohty"]
+[ext_resource type="AudioStream" uid="uid://cikyyqunxhwvq" path="res://Audio/Pause.wav" id="3_tox07"]
+[ext_resource type="AudioStream" uid="uid://c5knw1c7p1aw1" path="res://Audio/Unpause.wav" id="4_wyfeo"]
+[ext_resource type="AudioStream" uid="uid://bol5hmquvjhoy" path="res://Audio/Attack.wav" id="5_wyfeo"]
+[ext_resource type="AudioStream" uid="uid://dq4s6oucu65pn" path="res://Audio/StepWood.wav" id="6_08tfe"]
+
+[node name="SoundManager" type="Node"]
+process_mode = 3
+script = ExtResource("1_25ke0")
+
+[node name="Confirm" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_1ohty")
+
+[node name="Paused" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_tox07")
+
+[node name="Unpause" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_wyfeo")
+
+[node name="Attack" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_wyfeo")
+
+[node name="StepWood" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_08tfe")
