@@ -27,6 +27,11 @@ Your goal? Survive relentless waves of miniature skeleton warriors in an intense
 
 You can also play directly in your browser via [Itch.io](https://achocolatebar.itch.io/nano-siege)
 
+### 🖥️ Desktop (Windows/Linux)
+
+1. Download the latest release from the [Realeases](https://github.com/IanGelfand/Nano-Siege/releases)
+2. Run the executable (e.g. `NanoSiege.exe`)
+
 ---
 
 ## 🎮 Controls
