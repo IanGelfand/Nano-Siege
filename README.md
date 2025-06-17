@@ -1,4 +1,4 @@
-# 🛡️ Nano Siege
+# 🛡️ [Nano Siege](https://achocolatebar.itch.io/nano-siege)
 
 **Nano Siege** is my first game, built using [Godot Engine](https://godotengine.org/) as a submission for a game jam [GameDev.tv](https://itch.io/jam/gamedevtv-jam-2025)
 
